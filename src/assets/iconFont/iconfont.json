@@ -1,0 +1,44 @@
+{
+  "id": "2381397",
+  "name": "HlAlert",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "19984845",
+      "name": "图标-清除",
+      "font_class": "tubiao-qingchu-copy",
+      "unicode": "e780",
+      "unicode_decimal": 59264
+    },
+    {
+      "icon_id": "19985030",
+      "name": "图标-清除",
+      "font_class": "tubiao-qingchu-copy-copy",
+      "unicode": "e781",
+      "unicode_decimal": 59265
+    },
+    {
+      "icon_id": "12360865",
+      "name": "清除",
+      "font_class": "qingchu1",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "18634043",
+      "name": "清除",
+      "font_class": "qingchu",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "14849108",
+      "name": "关  闭",
+      "font_class": "guanbi",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    }
+  ]
+}

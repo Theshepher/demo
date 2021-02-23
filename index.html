@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    Vue.config.optionMergeStrategies.myOption = function(mixinVal, originVal) {
+        console.log(mixinVal, originVal)
+      /*注意这个地方有mixinVal才返回mixinVal,因为在mixin中也会进行选项合并*/
+      /*如果没有这个设定的话mixin中进行合并时因为没有mixinVal所以会返回undefine,导致后续也为undefined*/
+      if(mixinVal) return mixinVal;
+      return originVal
+    }
+    
+    var mixin = {
+      myOption: {
+        x: '123'
+      }
+    };
+    Vue.config.optionMergeStrategies.myOption()
+    var vm = new Vue({
+      el: '#app',
+      mixins: [mixin],
+      myOption: {
+        x: ''
+      },
+      created() {
+        console.log(this.$options.myOption);
+      }
+    });
+  </script>
+</body>
+
+</html>
